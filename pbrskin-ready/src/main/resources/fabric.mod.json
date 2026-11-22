@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "pbrskin",
+	"version": "${version}",
+	"name": "PBR Skin",
+	"description": "Use your own skin and optional labPBR normal and specular maps on your player model under Iris shaders.",
+	"license": "CC0-1.0",
+	"icon": "assets/pbrskin/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.example.pbrskin.PbrSkinMod"
+		],
+		"modmenu": [
+			"com.example.pbrskin.compat.ModMenuCompat"
+		]
+	},
+	"mixins": [
+		{
+			"config": "pbrskin.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"recommends": {
+		"modmenu": "*"
+	},
+	"suggests": {
+		"iris": ">=1.11.7"
+	}
+}
